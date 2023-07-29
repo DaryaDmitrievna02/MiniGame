@@ -1,0 +1,168 @@
+:root {
+  --color-button: #f78400;
+  --color-button-after: #f5f5f5;
+  --color-button: #424246;
+  --color-border: #373737;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(/background.jpg) !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+button {
+  cursor: pointer;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid var(--color-border);
+  min-height: 1020px;
+  width: 1025px;
+  background-image: url(/grass2.jpeg);
+  box-shadow: 0px 0px 16px 49px rgba(15, 41, 18, 0.2);
+  position: relative;
+}
+
+.start-btn {
+  position: relative;
+  font-size: 1.15rem;
+  font-weight: bold;
+  background: var(--color-button);
+  padding: 0.6rem 1rem;
+  margin: 1rem 0;
+  border: 0;
+}
+
+.start-btn::after {
+  position: absolute;
+  content: attr(data-content);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: inset 0 0 2px var(--color-border);
+  background-color: var(--color-button-after);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-0.2rem, -0.2rem);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.start-btn:hover::after,
+.start-btn:focus::after {
+  transform: translate(0);
+}
+
+.grid div {
+  transition: transform 0.4s ease;
+}
+
+.vamp {
+  background-image: url(/knight.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  z-index: 100;
+  background-size: contain;
+}
+
+.vill {
+  background-image: url(/3nRK.gif);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  z-index: 100;
+  background-size: contain;
+}
+
+.game-over {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.game-over > h1 {
+  font-size: 80px;
+  color: red;
+  font-weight: bold;
+}
+.game-over > button {
+  min-width: 150px;
+  min-height: 100px;
+  margin-top: 50px;
+  border-radius: 10px;
+  font-size: 30px;
+  padding: 2rem;
+  transition: 0.5s;
+  background-color: rgba(255, 209, 209, 0.9);
+}
+.game-over > button:hover {
+  transform: scale(1.2);
+}
+
+.score {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 805px;
+  background-color: rgba(13, 104, 5, 0.8);
+}
+
+.timer {
+  font-size: 24px;
+  color: white;
+}
+.timer > span {
+  margin-left: 10px;
+}
+
+.heart {
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  background-image: url(/heart.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 100;
+}
+
+.boom {
+  width: 100%;
+  height: 100%;
+  background-image: url(/boom.gif);
+  background-size: contain;
+}/*# sourceMappingURL=style.css.map */
